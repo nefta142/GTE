@@ -14,7 +14,7 @@ El proyecto está estructurado con buenas prácticas de orientación a objetos, 
 ### Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/GTE.git
+git clone https://github.com/nefta142/GTE.git
 ```
 
 ### Compilar y ejecutar
