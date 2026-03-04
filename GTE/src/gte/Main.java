@@ -13,22 +13,14 @@ public class Main {
 
         do {
 
-            System.out.println("\n1. Añadir tarea");
-            System.out.println("2. Listar tareas");
+            System.out.println("\n2. Listar tareas");
             System.out.println("0. Salir");
             System.out.print("Elige una opción: ");
 
             opcion = sc.nextInt();
-            sc.nextLine(); 
+            sc.nextLine();
 
             switch (opcion) {
-
-                case 1:
-                    System.out.print("Introduce la descripción de la tarea: ");
-                    String descripcion = sc.nextLine();
-                    gestor.agregarTarea(descripcion);
-                    System.out.println("Tarea añadida.");
-                    break;
 
                 case 2:
                     gestor.mostrarTareas();
