@@ -1,20 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package gte;
 
-/**
- *
- * @author nefta
- */
+import java.util.Scanner;
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+        GestorTareas gestor = new GestorTareas();
+
+        int opcion;
+
+        do {
+
+            System.out.println("\n1. Añadir tarea");
+            System.out.println("2. Listar tareas");
+            System.out.println("0. Salir");
+            System.out.print("Elige una opción: ");
+
+            opcion = sc.nextInt();
+            sc.nextLine(); 
+
+            switch (opcion) {
+
+                case 1:
+                    System.out.print("Introduce la descripción de la tarea: ");
+                    String descripcion = sc.nextLine();
+                    gestor.agregarTarea(descripcion);
+                    System.out.println("Tarea añadida.");
+                    break;
+
+                case 2:
+                    gestor.mostrarTareas();
+                    break;
+
+                case 0:
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida.");
+            }
+
+        } while (opcion != 0);
+
+        sc.close();
     }
-    
 }
